@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>ایجاد تیکت جدید</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Styles -->
+    <link type="text/css" href="css/bootstrap-rtl.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- / styles -->
+</head>
+
+<body class="bg-light">
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-md-12 mx-auto mb-5">
+                <div class="card rounded-3">
+                    <div class="card-content">
+                        <div class="card-header text-center bg-info">
+                            <h6 class="card-title text-light">ایجاد تیکت جدید</h6>
+                        </div>
+
+                        <div class="card-body">
+                            <form class="form">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <select class="selectpicker w-100" id="selected_Destination" name="selected_Destination" data-show-subtext="true"
+                                        data-live-search="true" placeholder=" مقصد ">                                            
+                                            <option value="1">سازمان</option>
+                                            <option value="2">شخص</option>
+                                            <option value="3">گروه</option>
+                                        </select>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <!-- <label for="selected_Items"></label> -->
+                                        <select class="selectpicker w-100 "
+                                            id="selected_Items" name="selected_Items[]" data-show-subtext="true"
+                                            data-live-search="true" placeholder=" انتخاب " multiple>                                        
+                                            <option value="1">حسن کنعانی</option>
+                                            <option value="2">عارف رضایی</option>
+                                            <option value="3">علی سلیم نیا</option>
+                                            <option value="4">شرکت آریا دادۀ نوین کیاران</option>
+                                            <option value="5">سازمان بورس ایران</option>
+                                            <option value="1">حسن کنعانی</option>
+                                            <option value="2">عارف رضایی</option>
+                                            <option value="3">علی سلیم نیا</option>
+                                            <option value="4">شرکت آریا دادۀ نوین کیاران</option>
+                                            <option value="5">سازمان بورس ایران</option>
+                                            <option value="1">حسن کنعانی</option>
+                                            <option value="2">عارف رضایی</option>
+                                            <option value="3">علی سلیم نیا</option>
+                                            <option value="4">شرکت آریا دادۀ نوین کیاران</option>
+                                            <option value="5">سازمان بورس ایران</option>                                           
+                                        </select>                                       
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="donationinput4" class="sr-only">Contact Number</label>
+                                        <input type="text" id="donationinput4" class="form-control" placeholder="موضوع تیکت" name="ticket_Subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="Description" id="Description" cols="30" rows="5" placeholder="لطفا توضیحات تیکت را بنویسید ..."></textarea>
+                                    </div>
+
+                                    <!-- select destination -->
+                                    <div class="form-group">
+                                        <select class="selectpicker w-100 " placeholder="وضعیت">                                            
+                                            <option value="1">تایید شده</option>
+                                            <option value="2">بسته شده</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <!-- / enter destination -->
+                                    <div class="form-group">
+                                        <label asp-for="imageticket" class="control-label">پیوست ها</label>
+                                        <input asp-for="imageticket"
+                                               class="form-control"
+                                               type="file"
+                                               name="imgup"
+                                               multiple />
+                                    </div>
+                                    <div class="row mt-4">                                   
+                                            <div class="col-6"> 
+                                                <button type="submit" class="btn btn-outline-primary w-100">ایجاد</button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="reset" class="btn btn-outline-danger w-100">بازنشانی</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <!-- / scripts -->
+</body>
+</html>
